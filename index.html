@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego 2048</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title-section">
+                <h1>2048</h1>
+                <p class="subtitle">Combina números para alcanzar 2048</p>
+            </div>
+            <div class="score-section">
+                <div class="score-box">
+                    <div class="score-label">Puntuación</div>
+                    <div class="score-value" id="score">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">Mejor</div>
+                    <div class="score-value" id="best-score">0</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="game-board" id="game-board">
+                <!-- Las celdas se generan con JavaScript -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="new-game-btn">Nuevo Juego</button>
+            <button class="btn btn-secondary" id="undo-btn">Deshacer</button>
+        </div>
+
+        <div class="instructions">
+            <h3>Cómo jugar:</h3>
+            <ul>
+                <li>🔄 Desliza para mover las fichas</li>
+                <li>➕ Combina dos fichas iguales para obtener una mayor</li>
+                <li>🎯 Intenta alcanzar la ficha de 2048</li>
+                <li>📱 Toca los botones de dirección o usa las teclas de flecha</li>
+            </ul>
+        </div>
+
+        <div class="button-controls">
+            <button class="arrow-btn" id="btn-up" title="Arriba">
+                <span>↑</span>
+            </button>
+            <div class="row">
+                <button class="arrow-btn" id="btn-left" title="Izquierda">
+                    <span>←</span>
+                </button>
+                <button class="arrow-btn" id="btn-down" title="Abajo">
+                    <span>↓</span>
+                </button>
+                <button class="arrow-btn" id="btn-right" title="Derecha">
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="modal" id="game-over-modal">
+            <div class="modal-content">
+                <h2 id="modal-title">¡Juego Terminado!</h2>
+                <p id="modal-message"></p>
+                <button class="btn btn-primary" onclick="location.reload()">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
